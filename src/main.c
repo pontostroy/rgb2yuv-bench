@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 #ifdef PRINT_PIXELS
 	for (i = 0; i < 4 * PIXELS_COUNT; i++)
 	{
-		printf("%d: %d %d %d\n", i, pixels_wiki[i], pixels_novel_ch[i], pixels_tables[i]);
+		printf("%d: %d %d %d %d %d\n", i, pixels_wiki[i], pixels_novel_ch[i], pixels_tables[i], pixels_gstreamer[i], pixels_see[i]);
 	}
 #endif
 
