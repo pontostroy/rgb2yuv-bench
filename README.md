@@ -12,6 +12,7 @@ rgb2yuv_tables: 0.320 sec
 ```
 
 Results on i5-3330 CPU @ 3.00GHz:
+
 ```
 rgb2yuv_wiki: 0.670 sec
 rgb2yuv_novell_ch: 0.424 sec
