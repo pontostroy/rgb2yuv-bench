@@ -9,6 +9,8 @@
 static uint8_t pixels_wiki[4 * PIXELS_COUNT];
 static uint8_t pixels_novel_ch[4 * PIXELS_COUNT];
 static uint8_t pixels_tables[4 * PIXELS_COUNT];
+static uint8_t pixels_gstreamer[4 * PIXELS_COUNT];
+static uint8_t pixels_see[4 * PIXELS_COUNT];
 
 int main(int argc, char *argv[])
 {
@@ -27,6 +29,8 @@ int main(int argc, char *argv[])
 		pixels_wiki[i] = x;
 		pixels_novel_ch[i] = x;
 		pixels_tables[i] = x;
+                pixels_gstreamer[i] = x;
+                pixels_see[i] = x;
 	}
 
 	// run conversations
@@ -46,6 +50,16 @@ int main(int argc, char *argv[])
 	rgb2yuv_tables(pixels_tables, PIXELS_COUNT);
 	finish = clock();
 	printf("rgb2yuv_tables: %.3f sec\n", (float) (finish - start) / CLOCKS_PER_SEC);
+        
+        start = clock();
+        rgb2yuv_gstreamer(pixels_gstreamer, PIXELS_COUNT);
+        finish = clock();
+        printf("rgb2yuv_gstreamer: %.3f sec\n", (float) (finish - start) / CLOCKS_PER_SEC);
+        
+        start = clock();
+        rgb2yuv_sse(pixels_see, PIXELS_COUNT);
+        finish = clock();
+        printf("rgb2yuv_sse: %.3f sec\n", (float) (finish - start) / CLOCKS_PER_SEC);
 
 #ifdef PRINT_PIXELS
 	for (i = 0; i < 4 * PIXELS_COUNT; i++)

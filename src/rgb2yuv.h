@@ -20,7 +20,7 @@ void rgb2yuv_wiki(uint8_t *pixels, int count);
 void rgb2yuv_novell_ch(uint8_t *pixels, int count);
 void rgb2yuv_tables(uint8_t *pixels, int count);
 void rgb2yuv_gstreamer(uint8_t *pixels, int count);
-
+void rgb2yuv_sse(uint8_t *pixels, int count);
 
 void rgb2yuv_tables_init(void);
 
