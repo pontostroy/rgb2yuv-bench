@@ -61,12 +61,11 @@ int main(int argc, char *argv[])
         finish = clock();
         printf("rgb2yuv_sse: %.3f sec\n", (float) (finish - start) / CLOCKS_PER_SEC);
 
-#ifdef PRINT_PIXELS
-	for (i = 0; i < 4 * PIXELS_COUNT; i++)
+
+	for (i = 0; i < 100; i++)
 	{
 		printf("%d: %d %d %d %d %d\n", i, pixels_wiki[i], pixels_novel_ch[i], pixels_tables[i], pixels_gstreamer[i], pixels_see[i]);
 	}
-#endif
 
 	return 0;
 }

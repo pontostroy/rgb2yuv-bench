@@ -23,7 +23,7 @@ void rgb2yuv_sse(uint8_t *pixels, int count)
         __m128i v_mat_04 = _mm_set1_epi16((short int)-26);
         __m128i v_mat_05 = _mm_set1_epi16((short int)-87);
         __m128i v_mat_06 = _mm_set1_epi16((short int)112);
-        __m128i v_mat_07 = _mm_set1_epi16((short int)3768);
+        __m128i v_mat_07 = _mm_set1_epi16((short int)32768);
         __m128i v_mat_08 = _mm_set1_epi16((short int)112);
         __m128i v_mat_09 = _mm_set1_epi16((short int)-102);
         __m128i v_mat_10 = _mm_set1_epi16((short int)-10);
